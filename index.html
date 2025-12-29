@@ -472,16 +472,14 @@ document.querySelectorAll('input[name="basemap"]').forEach(radio => {
 //  أيقونات النقاط (Images folder)
 // ----------------------------------
 const icons = {
-  electrictrans: L.icon({ iconUrl: "images/electric_trans.png", iconSize: [18, 18] }),
-  streetlight: L.icon({ iconUrl: "images/streetlight.png", iconSize: [18, 18] }),
+  electric_trans: L.icon({ iconUrl: "images/electric_trans.png", iconSize: [18, 18] }),
+  distribution_panel: L.icon({ iconUrl: "images/distribution_panel.png", iconSize: [18, 18] }),
   networking: L.icon({ iconUrl: "images/networking.png", iconSize: [18, 18] }),
-  watervalve: L.icon({ iconUrl: "images/valve.png", iconSize: [18, 18] }),
-  airvalve: L.icon({ iconUrl: "images/valve.png", iconSize: [18, 18] }),
+  water_valve: L.icon({ iconUrl: "images/water_valve.png", iconSize: [18, 18] }),
+  air_valve: L.icon({ iconUrl: "images/water_air_valve.png", iconSize: [18, 18] }),
   sewer: L.icon({ iconUrl: "images/sewer.png", iconSize: [18, 18] }),
-  sewer_station: L.icon({ iconUrl: "images/Sewer_station.png", iconSize: [18, 18] }),
-  gas_icon: L.icon({ iconUrl: "images/gas_valve.png", iconSize: [18, 18] }),
   gas_end_icon: L.icon({ iconUrl: "images/gas_end_icon.png", iconSize: [18, 18] }),
-  gas_regulator_icon: L.icon({ iconUrl: "images/gas_regulator.png", iconSize: [18, 18] })
+  gas_reducer_icon: L.icon({ iconUrl: "images/gas_reducer.png", iconSize: [18, 18] })
 };
 
 
@@ -493,23 +491,24 @@ const icons = {
 // ----------------------------------
 const layersInfo = {
 
-  "خطوط الكهرباء ⚡": { file: "layers/electric_lines.geojson", color: "#ff0000" },
-  "محولات الكهرباء ⚡": { file: "layers/electric_points.geojson", icon: icons.electrictrans },
+  "خطوط الكهرباء ⚡": { file: "layers/electricity_polylines.geojson", color: "#ff0000" },
+  "محولات الكهرباء ⚡": { file: "layers/electric_points.geojson", icon: icons.electric_trans },
+  "لوحات توزيع الكهرباء ⚡": { file: "layers/electric_distribution_panel.geojson", icon: icons.distribution_panel },
+
 
   "خطوط الإنترنت 🌐": { file: "layers/landline_lines.geojson", color: "#00cc66" },
-  "نقاط توزيع خطوط الإنترنت 🌐": { file: "layers/landline_points.geojson", icon: icons.networking },
+  "نقاط توزيع خطوط الإنترنت 🌐": { file: "layers/landline_distribution_cabinet.geojson", icon: icons.networking },
 
   "خطوط المياه💧": { file: "layers/water_lines.geojson", color: "#007bff" },
-  "محابس المياه 🚰": { file: "layers/water_valve.geojson", icon: icons.watervalve },
-  "محابس الهواء 🚰": { file: "layers/water_air_valve.geojson", icon: icons.airvalve },
+  "محابس المياه 🚰": { file: "layers/water_valve.geojson", icon: icons.water_valve },
+  "محابس الهواء 🚰": { file: "layers/water_air_valve.geojson", icon: icons.air_valve },
   
-  "خطوط الصرف الصحي 🚽": { file: "layers/sewer_line.geojson", color: "#800080" },
-  "غرف تفتيش الصرف 💿": { file: "layers/sewer_points_search.geojson", icon: icons.sewer },
-  "غرف صرف صحي (مطابق) 💿": { file: "layers/sewer_points1.geojson", icon: icons.sewer },
+  "خطوط الصرف الصحي 🚽": { file: "layers/sewer_lines.geojson", color: "#800080" },
+  "غرف صرف صحي (مطابق) 💿": { file: "layers/sewer_manhole.geojson", icon: icons.sewer },
   
 
   "خطوط الغاز ♨": { file: "layers/gas_lines.geojson", color: "#FF8C00" },
-  "مخفض الغاز ♨": { file: "layers/gas_reducer.geojson", icon: icons.gas_icon },
+  "مخفض الغاز ♨": { file: "layers/gas_reducer.geojson", icon: icons.gas_reducer_icon },
   "النهايات المغلقة للغاز ♨": { file: "layers/gas_endcap.geojson", icon: icons.gas_end_icon }
 
 };
@@ -765,6 +764,7 @@ northArrow.addEventListener("click", () => {
 </script>
 </body>
 </html>
+
 
 
 
