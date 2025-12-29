@@ -472,10 +472,11 @@ document.querySelectorAll('input[name="basemap"]').forEach(radio => {
 //  أيقونات النقاط (Images folder)
 // ----------------------------------
 const icons = {
-  electrictrans: L.icon({ iconUrl: "images/electrictrans.png", iconSize: [18, 18] }),
+  electrictrans: L.icon({ iconUrl: "images/electric_trans.png", iconSize: [18, 18] }),
   streetlight: L.icon({ iconUrl: "images/streetlight.png", iconSize: [18, 18] }),
   networking: L.icon({ iconUrl: "images/networking.png", iconSize: [18, 18] }),
-  valve: L.icon({ iconUrl: "images/valve.png", iconSize: [18, 18] }),
+  watervalve: L.icon({ iconUrl: "images/valve.png", iconSize: [18, 18] }),
+  airvalve: L.icon({ iconUrl: "images/valve.png", iconSize: [18, 18] }),
   sewer: L.icon({ iconUrl: "images/sewer.png", iconSize: [18, 18] }),
   sewer_station: L.icon({ iconUrl: "images/Sewer_station.png", iconSize: [18, 18] }),
   gas_icon: L.icon({ iconUrl: "images/gas_valve.png", iconSize: [18, 18] }),
@@ -499,16 +500,16 @@ const layersInfo = {
   "نقاط توزيع خطوط الإنترنت 🌐": { file: "layers/landline_points.geojson", icon: icons.networking },
 
   "خطوط المياه💧": { file: "layers/water_lines.geojson", color: "#007bff" },
-  "محابس المياه 🚰": { file: "layers/water_points.geojson", icon: icons.valve },
-
+  "محابس المياه 🚰": { file: "layers/water_valve.geojson", icon: icons.watervalve },
+  "محابس الهواء 🚰": { file: "layers/water_air_valve.geojson", icon: icons.airvalve },
+  
   "خطوط الصرف الصحي 🚽": { file: "layers/sewer_line.geojson", color: "#800080" },
   "غرف تفتيش الصرف 💿": { file: "layers/sewer_points_search.geojson", icon: icons.sewer },
   "غرف صرف صحي (مطابق) 💿": { file: "layers/sewer_points1.geojson", icon: icons.sewer },
   
 
   "خطوط الغاز ♨": { file: "layers/gas_lines.geojson", color: "#FF8C00" },
-  "محابس الغاز ♨": { file: "layers/gas_valve.geojson", icon: icons.gas_icon },
-  "منظم الغاز ♨": { file: "layers/gas_regulator.geojson", icon: icons.gas_regulator_icon },
+  "مخفض الغاز ♨": { file: "layers/gas_reducer.geojson", icon: icons.gas_icon },
   "النهايات المغلقة للغاز ♨": { file: "layers/gas_endcap.geojson", icon: icons.gas_end_icon }
 
 };
@@ -522,6 +523,7 @@ const groups = {
 
   "الكهرباء ⚡": [
     "خطوط الكهرباء ⚡",
+    "لوحات توزيع الكهرباء ⚡",
     "محولات الكهرباء ⚡"
   ],
 
@@ -532,19 +534,18 @@ const groups = {
 
   "المياه 💧🚰": [
     "خطوط المياه💧",
-    "محابس المياه 🚰"
+    "محابس المياه 🚰",
+    "محابس الهواء 🚰"
   ],
 
   "الصرف الصحي 💿🚽": [
     "خطوط الصرف الصحي 🚽",
-    "غرف تفتيش الصرف 💿",
     "غرف صرف صحي (مطابق) 💿",
   ],
 
   "الغاز ♨": [
     "خطوط الغاز ♨",
-    "محابس الغاز ♨",
-    "منظم الغاز ♨",
+    "مخفض الغاز ♨",
     "النهايات المغلقة للغاز ♨"
   ],
 
@@ -764,6 +765,7 @@ northArrow.addEventListener("click", () => {
 </script>
 </body>
 </html>
+
 
 
 
