@@ -1,0 +1,4 @@
+{
+  "type" : "FeatureCollection",
+  "features" : [{"type":"Feature","id":1,"geometry":{"type":"Point","coordinates":[30.544112734000066,25.46113052000004]},"properties":{"OID":1,"code":"72","discription":"نهاية خط"}}]
+}

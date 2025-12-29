@@ -1,0 +1,4 @@
+{
+  "type" : "FeatureCollection",
+  "features" : [{"type":"Feature","id":1,"geometry":{"type":"Point","coordinates":[30.541797297000073,25.462557820000029]},"properties":{"OID":1,"Name":"كابينة توزيع خط ارضي","code":"34"}},{"type":"Feature","id":2,"geometry":{"type":"Point","coordinates":[30.541472423000073,25.458651475000067]},"properties":{"OID":2,"Name":"كابينة توزيع خط ارضي","code":"34"}},{"type":"Feature","id":3,"geometry":{"type":"Point","coordinates":[30.541527172000031,25.458627583000066]},"properties":{"OID":3,"Name":"كابينة توزيع خط ارضي","code":"34"}},{"type":"Feature","id":4,"geometry":{"type":"Point","coordinates":[30.540569615000038,25.456763783000042]},"properties":{"OID":4,"Name":"كابينة توزيع خط ارضي","code":"34"}}]
+}

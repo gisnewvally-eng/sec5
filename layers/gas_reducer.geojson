@@ -1,0 +1,4 @@
+{
+  "type" : "FeatureCollection",
+  "features" : [{"type":"Feature","id":1,"geometry":{"type":"Point","coordinates":[30.543346927975385,25.460164196687316]},"properties":{"OBJECTID":1,"code":"73","discription":"خافض"}},{"type":"Feature","id":2,"geometry":{"type":"Point","coordinates":[30.542026223804747,25.460235412045041]},"properties":{"OBJECTID":2,"code":"73","discription":"خافض"}}]
+}
