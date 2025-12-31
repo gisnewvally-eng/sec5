@@ -1,0 +1,4 @@
+{
+  "type" : "FeatureCollection",
+  "features" : [{"type":"Feature","id":1,"geometry":{"type":"Point","coordinates":[30.541543833000048,25.460299937000059]},"properties":{"OID":1,"Name":"old handhole","code":"37","discription":"عمق 0.9 م"}}]
+}

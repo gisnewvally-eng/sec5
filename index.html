@@ -474,6 +474,8 @@ document.querySelectorAll('input[name="basemap"]').forEach(radio => {
 const icons = {
   electric_trans: L.icon({ iconUrl: "images/electric_trans.png", iconSize: [18, 18] }),
   distribution_panel: L.icon({ iconUrl: "images/distribution_panel.png", iconSize: [18, 18] }),
+  manhole: L.icon({ iconUrl: "images/manhole.png", iconSize: [18, 18] }),
+  handhole: L.icon({ iconUrl: "images/handhole.png", iconSize: [18, 18] }),
   networking: L.icon({ iconUrl: "images/networking.png", iconSize: [18, 18] }),
   water_valve: L.icon({ iconUrl: "images/water_valve.png", iconSize: [18, 18] }),
   air_valve: L.icon({ iconUrl: "images/water_air_valve.png", iconSize: [18, 18] }),
@@ -497,6 +499,8 @@ const layersInfo = {
 
 
   "خطوط الإنترنت 🌐": { file: "layers/landline_lines.geojson", color: "#00cc66" },
+  "غرف توزيع خطوط الإنترنت الرئيسية 🌐": { file: "layers/landline_manhole.geojson", icon: icons.manhole },
+  "غرف توزيع خطوط الإنترنت الفرعية 🌐": { file: "layers/landline_handhole.geojson", icon: icons.handhole },
   "نقاط توزيع خطوط الإنترنت 🌐": { file: "layers/landline_distribution_cabinet.geojson", icon: icons.networking },
 
   "خطوط المياه💧": { file: "layers/water_lines.geojson", color: "#007bff" },
@@ -528,6 +532,8 @@ const groups = {
 
   "الإنترنت 🌐": [
     "خطوط الإنترنت 🌐",
+    "غرف توزيع خطوط الإنترنت الرئيسية 🌐",
+    "غرف توزيع خطوط الإنترنت الفرعية 🌐",
     "نقاط توزيع خطوط الإنترنت 🌐"
   ],
 
